@@ -1,0 +1,104 @@
+@font-face {
+    font-family: 'Sprat';
+    src: url('fuente/SpratVF.woff2') format('woff2-variations'),
+        url('fuente/SpratVF.woff2') format('woff2');
+    font-weight: 10 200;
+    font-stretch: 100% 200%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+#heroSection {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+
+.cinta {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 200%; 
+    animation: moverCinta 5s linear infinite;
+}
+
+.cinta2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100px;
+    width: 200%; 
+    animation: moverCinta2 5s linear infinite;
+}
+
+
+@keyframes moverCinta {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-40%); }
+}
+
+@keyframes moverCinta2 {
+    0% { transform: translateX(-40%); }
+    100% { transform: translateX(0); }
+}
+
+
+.s1, .s2, .s3, .s4 {
+    font-family: 'Sprat';
+    font-weight: 100;
+    position: relative;
+    z-index: 2;
+}
+
+.s1 {
+    font-size: 30px;
+    color: white;
+}
+
+.s2 {
+    font-size: 300px;
+    color: #B60000;
+    animation: variacion 2s infinite alternate linear;
+}
+
+@keyframes variacion {
+    0% { font-stretch: 100; }
+    50% { font-weight: 200; }
+    100% { font-weight: 50; }
+}
+
+.s3 {
+    font-size: 30px;
+    color: #B60000;
+}
+
+.s4 {
+    font-size: 30px;
+    color: white;
+}
+
+
+/*.action {
+    color: #FFCC00;
+    font-family: 'Sprat';
+    font-size: 20px;
+    padding: 10px 25px;
+    top: 750px;
+    position: absolute;
+    border: 3px solid #FFCC00;
+    border-radius: 60px;
+    z-index: 3;
+    /*animation: parpadeo 5s steps(1, end) 1 forwards;*/
+}
